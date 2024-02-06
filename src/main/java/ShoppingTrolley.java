@@ -3,10 +3,6 @@ import java.util.ArrayList;
 public class ShoppingTrolley {
     private ArrayList<String> itemList = new ArrayList<>();
 
-    public ShoppingTrolley(){
-
-    }
-
     public void addItem(String item){
         itemList.add(item);
     }

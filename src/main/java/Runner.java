@@ -38,14 +38,13 @@ public class Runner {
         System.out.println("Computer now has " + newStorage + "GB storage");
 
         // 4. Use a setter to update the computer's printer property
-      computer.setModel("newModel");
         // Write a getter and use it below to check that the setter worked
-         String currentPrinter = computer.setModel();
-       System.out.println("Computer currently has a " + currentPrinter + " printer connected.");
+        String currentPrinter = computer.setModel("MarvellousPrinter");
+        System.out.println("Computer currently has a " + currentPrinter + " printer connected.");
 
         // 5. Write a method to print a message.
         // To test this works *without* a printer too you can comment out the code for question 4
-//        computer.printMessage("Hello World!");
+        computer.printMessage("Hello World!");
     }
 
     public static void shoppingTrolleyDemo(){
@@ -53,19 +52,19 @@ public class Runner {
         System.out.println("Running shopping trolley tasks...");
 
         // 1. Create a new shopping trolley
-//        ShoppingTrolley trolley = <INSTANTIATE A NEW SHOPPINGTROLLEY OBJECT HERE>;
+        ShoppingTrolley trolley = new ShoppingTrolley();
 
         // 2. Add an item to the trolley
-//        <CALL YOUR METHOD HERE>;
+        trolley.addItem("apple");
+        trolley.addItem("orange");
+        trolley.addItem("milk");
 
         // 3. Count items in the trolley
-//        int itemCount = <CALL YOUR METHOD HERE>;
-//        System.out.println("The trolley contains " + itemCount + " items.");
+        int itemCount = trolley.itemCount();
+        System.out.println("The trolley contains " + itemCount + " items.");
 
         // 4. Check if an item is in the trolley
-//        boolean itemInTrolley = <CALL YOUR METHOD HERE>;
-//        System.out.println("Object is a square (true/false): " + itemInTrolley);
+        boolean itemInTrolley = trolley.itemInTrolley("bread");
+        System.out.println("Item in trolley (true/false): " + itemInTrolley);
     }
-
-
 }

@@ -11,8 +11,9 @@ public class Computer {
         return storage;
     }
 
-    public void setModel(String newModel){
+    public String setModel(String newModel){
         this.model = newModel;
+        return model;
     }
 
     public int addStorage(int extraStorage ){
@@ -21,9 +22,9 @@ public class Computer {
         return storage;
     }
 
-    public void printMessage(){
+    public void printMessage(String msg){
         if (model != null){
-            System.out.println("Your model is " + model);
+            System.out.println(msg);
         }
     }
 
