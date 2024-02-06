@@ -15,9 +15,10 @@ public class Computer {
         this.model = newModel;
     }
 
-    public void addStorage(int extraStorage ){
+    public int addStorage(int extraStorage ){
         System.out.println("How much storage do you want to add??");
         this.storage += extraStorage;
+        return storage;
     }
 
     public void printMessage(){
